@@ -13,6 +13,7 @@
           <button class="play" v-if="!isPlaying" @click="play">Play</button>
           <button class="pause" v-else @click="pause">Pause</button>
           <button class="next" @click="next">Next</button>
+          <Test />
         </div>
       </section>
       <section class="playlist">
@@ -31,8 +32,12 @@
 </template>
 
 <script>
+import Test from "./components/Test.vue";
 export default {
   name: "app",
+  components: {
+    Test,
+  },
   data() {
     return {
       current: {},
